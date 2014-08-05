@@ -1,0 +1,9 @@
+.row
+  %h2 Roombox
+
+  =link_to "Add Room", new_room_path
+
+  .row
+    .large-6.small-12.columns
+      -@rooms.each do |room|
+        =link_to room.name, room_path(room), class: "button"

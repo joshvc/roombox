@@ -1,0 +1,12 @@
+.row
+  %h2{style: "color: #{@room.color if !@room.color.blank?}"}
+    = link_to "Rooms", rooms_path
+    >>
+    = @room.name
+  =link_to "Edit Room", edit_room_path(@room)
+  |
+  =link_to "New Box", new_room_box_path(@room)
+.row
+  .large-6.small-12.columns
+    -@room.boxes.each do |box|
+      =link_to box.name, box_path(box), class: "button #{'success' if box == Box.last}"

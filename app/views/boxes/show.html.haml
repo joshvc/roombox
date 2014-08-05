@@ -1,0 +1,17 @@
+.row
+  %h2
+    = "Box #{@box.name} -"
+    = link_to @box.room.name, room_path(@box.room)
+.row.collapse
+  .large-3.small-12.columns
+    %h6 New Item
+    =simple_form_for [@box, @item] do |f|
+      .row.collapse
+        .small-9.columns
+          =f.input :name, label: false
+        .small-3.columns
+          =f.submit "Add", class: "button postfix"
+.row
+  %ul
+    -@box.items.each do |item|
+      %li= item.name

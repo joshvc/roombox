@@ -1,0 +1,6 @@
+.row
+  =simple_form_for @room do |f|
+    =f.input :name
+    =f.input :identifier, label: "1-2 Letter Room Identifier"
+    =f.input :color
+    =f.submit class: "button"
