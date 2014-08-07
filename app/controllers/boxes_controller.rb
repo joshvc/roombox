@@ -10,5 +10,9 @@ class BoxesController < ApplicationController
     @item = @box.items.new
   end
 
+  def lookup
+    @box = Box.lookup(params[:box])
+  end
+
   private
 end

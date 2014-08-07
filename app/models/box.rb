@@ -5,4 +5,9 @@ class Box < ActiveRecord::Base
   def name
     room.identifier + id.to_s
   end
+
+  def self.lookup(query)
+    q = query.delete("^0-9")
+    find(q)
+  end
 end

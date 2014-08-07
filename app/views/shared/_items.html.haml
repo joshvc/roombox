@@ -1,0 +1,7 @@
+%ul
+  -items.each do |item|
+    %li
+      -if show_box == true
+        = "#{item.name}: Box #{item.box.name}"
+      -else
+        = item.name

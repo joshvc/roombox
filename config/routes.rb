@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :boxes, only: [:show, :edit, :update] do
     resources :items, only: [:create]
+    post :lookup, on: :collection
   end
 
   resources :items, only: [] do

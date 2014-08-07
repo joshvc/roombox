@@ -8,11 +8,20 @@
     -@rooms.each do |room|
       =link_to room.name, room_path(room), class: "button"
   .large-6.small-12.columns
-    =form_tag '/items/search', remote: true
-    .row.collapse
-      .small-9.columns
-        =text_field_tag :query, nil, placeholder: "Item Search"
-      .small-3.columns
-        =submit_tag "Search", class: "button postfix"
+    .row
+      =form_tag '/items/search', remote: true do
+        .large-8.small-12.columns
+          .row.collapse
+            .small-9.columns
+              =text_field_tag :query, nil, placeholder: "Item Search"
+            .small-3.columns
+              =submit_tag "Search", class: "button postfix"
+      =form_tag '/boxes/lookup', remote: true do
+        .large-4.small-12.columns
+          .row.collapse
+            .small-9.columns
+              =text_field_tag :box, nil, placeholder: "Box"
+            .small-3.columns
+              =submit_tag "Go", class: "button postfix"
 
-    .search-results
+    .row.search-results
