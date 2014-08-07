@@ -27,5 +27,5 @@ TODO:
 * Simple HTTP authentication
 * Validations on the room creation
 * Printable, color coded box labels
-* Quick box lookup
-* Inventory Search
+* ~~Quick box lookup~~
+* ~~Inventory Search~~
