@@ -1,0 +1,5 @@
+.row
+  %ul
+    -@items.each do |item|
+      %li
+        = "#{item.name}: Box #{item.box.name}"

@@ -1,9 +1,18 @@
 .row
-  %h2 Roombox
+  .large-6.small-12.columns
+    %h2 Roombox
 
-  =link_to "Add Room", new_room_path
+    =link_to "Add Room", new_room_path
+.row
+  .large-6.small-12.columns
+    -@rooms.each do |room|
+      =link_to room.name, room_path(room), class: "button"
+  .large-6.small-12.columns
+    =form_tag '/items/search', remote: true
+    .row.collapse
+      .small-9.columns
+        =text_field_tag :query, nil, placeholder: "Item Search"
+      .small-3.columns
+        =submit_tag "Search", class: "button postfix"
 
-  .row
-    .large-6.small-12.columns
-      -@rooms.each do |room|
-        =link_to room.name, room_path(room), class: "button"
+    .search-results
