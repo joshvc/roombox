@@ -9,6 +9,21 @@
       =link_to room.name, room_path(room), class: "button"
   .large-6.small-12.columns
     .row
+      =form_tag '/labels', method: :get do
+        .large-12.small-13.columns
+          %h4 Print Labels
+          .row.collapse
+            .large-3.small-3.columns
+              =text_field_tag :from, nil, placeholder: "From"
+            .large-3.small-3.columns
+              =text_field_tag :to, nil, placeholder: "To"
+            .large-3.small-3.columns
+              =text_field_tag :row,nil, placeholder: "Start Row"
+            .large-3.small-3.columns
+              =submit_tag "Go", class: "button postfix"
+    .row
+      .large-12.columns
+        %h4 Search 
       =form_tag '/items/search', remote: true do
         .large-8.small-12.columns
           .row.collapse

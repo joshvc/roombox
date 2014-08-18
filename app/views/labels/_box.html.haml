@@ -1,0 +1,9 @@
+.box
+  .name
+    %h1= box.room.identifier
+    %h1= box.id
+  .items
+    %ul
+      -box.items.first(8).each do |item|
+        %li= truncate(item.name, length: 80)
+      %li= "#{box.items.count - 8} Other Items" if box.items.count > 8

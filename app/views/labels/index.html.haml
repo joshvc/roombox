@@ -1,15 +1,14 @@
 =stylesheet_link_tag 'labels', media: "all"
 
+.page
+  -@empty_boxes.times do
+    .box
+  -@first_boxes.each do |box|
+    =render 'box', box: box
+.page-break
+
 -@boxes.in_groups_of(10, false).each do |box_group|
   .page
     -box_group.each do |box|
-      .box
-        .name
-          %h1= box.room.identifier
-          %h1= box.id
-        .items
-          %ul
-            -box.items.first(8).each do |item|
-              %li= truncate(item.name, length: 80)
-            %li= "#{box.items.count - 8} Other Items" if box.items.count > 8
+      =render 'box', box: box
   .page-break

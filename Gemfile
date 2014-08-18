@@ -18,3 +18,5 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'rails_12factor', group: :production
 gem 'simple_form'
+
+gem 'pry', group: :development
