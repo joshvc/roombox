@@ -14,11 +14,11 @@
           %h4 Print Labels
           .row.collapse
             .large-3.small-3.columns
-              =text_field_tag :from, nil, placeholder: "From"
+              =number_field_tag :from, nil, placeholder: "From"
             .large-3.small-3.columns
-              =text_field_tag :to, nil, placeholder: "To"
+              =number_field_tag :to, nil, placeholder: "To"
             .large-3.small-3.columns
-              =text_field_tag :row,nil, placeholder: "Start Row"
+              =number_field_tag :row,nil, placeholder: "Start Row"
             .large-3.small-3.columns
               =submit_tag "Go", class: "button postfix"
     .row
