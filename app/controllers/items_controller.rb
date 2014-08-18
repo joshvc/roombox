@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.secrets.http_basic_username,
+    password: Rails.application.secrets.http_basic_password
+    
   def create
     @box = Box.find(params[:box_id])
     @item = @box.items.new(item_params)

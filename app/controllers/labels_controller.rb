@@ -1,4 +1,7 @@
 class LabelsController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.secrets.http_basic_username,
+    password: Rails.application.secrets.http_basic_password
+
   def index
     if params[:row].empty?
       @empty_boxes = 0

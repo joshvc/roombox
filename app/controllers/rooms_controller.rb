@@ -1,4 +1,9 @@
 class RoomsController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.secrets.http_basic_username,
+    password: Rails.application.secrets.http_basic_password,
+    except: :index
+
+
   def index
     @rooms = Room.all
   end
