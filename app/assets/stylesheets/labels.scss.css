@@ -1,0 +1,44 @@
+body {
+  width: 8.5in;
+  margin: 0in .1875in;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  }
+.box{
+  /* Avery 5160 labels -- CSS and HTML by MM at Boulder Information Services */
+  width: 3.4in; /* plus .6 inches from padding */
+  height: 1.875in; /* plus .125 inches from padding */
+  padding: .125in .3in 0;
+  margin-right: .25in; /* the gutter */
+
+  float: left;
+
+  text-align: center;
+  overflow: hidden;
+
+  outline: 1px dotted; /* outline doesn't occupy space like border does */
+  }
+.page-break  {
+  clear: left;
+  display:block;
+  page-break-after:always;
+  }
+
+.name {
+  float:left;
+  width:40%;
+  margin-top:.15in;
+}
+.name h1{
+  font-size: 90px;
+  margin:0;
+  line-height:70px;
+}
+.items {
+  float:right;
+  width:60%;
+  text-align: left;
+  margin-top:-.2in;
+}
+.items li{
+  list-style-type: none;
+}
