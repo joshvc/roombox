@@ -15,17 +15,17 @@ Usage:
 * Begin by Creating a Room
 * Name & a 2 letter code are required (ie, MB for Master Bedroom, K for Kitchen)
 * Validations don't exist yet, but trust me, name & identifier.
-* Color will be looking for a hex code..later.
+* Color looks for a hex code, with or without the #.
 * Create a new box
 * Fill that box and log your items on the Box screen
-* For now, write the box code (ie, MB1) on your boxes
-* Later, you'll be able to print labels for those boxes (with the color you'll assign, see how that's coming together?), but if you don't mark them now, you'll wish you had when the labels print.
+* Write the box code (ie, MB1) on your boxes
+* Print labels for those boxes (with the color you'll assign, see how that's coming together?), but if you don't mark them now, you'll wish you had when the labels print.
 * Create more boxes, create more rooms, and so on.
 * Consider adding a link to your home screen- we're mobile friendly here.
 
 TODO:
 * Simple HTTP authentication
 * Validations on the room creation
-* Printable, color coded box labels
+* ~~Printable, color coded box labels~~
 * ~~Quick box lookup~~
 * ~~Inventory Search~~
