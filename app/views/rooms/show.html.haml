@@ -1,7 +1,11 @@
 .row
-  %h2{style: "color: #{@room.color if !@room.color.blank?}"}
-    = link_to "Rooms", rooms_path
-    >>
+  %ul.breadcrumbs
+    %li
+      %a{href: '/'} Rooms
+    %li.current
+      =@room.name
+.row
+  %h2{style: "color: #{@room.color_code}"}
     = @room.name
   =link_to "Edit Room", edit_room_path(@room)
   |

@@ -1,17 +1,25 @@
 .row
+  %ul.breadcrumbs
+    %li
+      %a{href: '/'} Rooms
+    %li
+      =link_to @box.room.name, room_path(@box.room)
+    %li.current
+      ="Box #{@box.name}"
+.row
   %h2
-    = "Box #{@box.name} -"
-    = link_to @box.room.name, room_path(@box.room)
+    = "Box #{@box.name}"
 .row.collapse
   .large-3.small-12.columns
     %h6 New Item
     =simple_form_for [@box, @item] do |f|
       .row.collapse
         .small-9.columns
-          =f.input :name, label: false
+          =f.input :name, label: false, autofocus: true
         .small-3.columns
           =f.submit "Add", class: "button postfix"
 .row
   %ul
     -@box.items.each do |item|
-      %li= item.name
+      -unless item.name.nil?
+        %li= item.name
