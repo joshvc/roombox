@@ -35,3 +35,5 @@ License:
 
 Contributing:
 * Well, sure, I'm open to reviewing a pull request here and there.
+
+[![Code Climate](https://codeclimate.com/github/joshvc/roombox/badges/gpa.svg)](https://codeclimate.com/github/joshvc/roombox)
