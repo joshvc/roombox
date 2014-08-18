@@ -1,7 +1,9 @@
 .box
   .name
-    %h1= box.room.identifier
-    %h1= box.id
+    %h1{style: "color: #{box.room.color_code}"}
+      = box.room.identifier
+      %br
+      = box.id
   .items
     %ul
       -box.items.first(8).each do |item|
