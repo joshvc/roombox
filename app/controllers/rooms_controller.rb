@@ -15,6 +15,8 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     if @room.save
       redirect_to rooms_path, notice: "Room created successfully"
+    else
+      render 'new'
     end
   end
 
