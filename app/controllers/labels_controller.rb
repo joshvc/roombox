@@ -10,6 +10,5 @@ class LabelsController < ApplicationController
 
     @boxes = Box.where(id: from..to).to_a
     @first_boxes = @boxes.shift(10 - @empty_boxes)
-    render layout: false
   end
 end
