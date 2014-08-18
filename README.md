@@ -1,6 +1,6 @@
 ### Roombox
 
-A very simple moving box inventory system- Rooms have many Boxes, Boxes have many items, the end.
+A very simple moving box inventory system- Rooms have many Boxes, Boxes have many items, the end. View a [demo in action](http://roomboxdemo.herokuapp.com)- username is `demo`, password is `roombox`.
 
 Meant to be launched to Heroku for cross-platform access. In its present form, there is no authentication, so you'll want to host your own instance.
 
@@ -22,13 +22,16 @@ Usage:
 * Create a new box
 * Fill that box and log your items on the Box screen
 * Write the box code (ie, MB1) on your boxes
-* Print labels for those boxes (with the color you'll assign, see how that's coming together?), but if you don't mark them now, you'll wish you had when the labels print.
+* Print labels for those boxes using Avery x163 labels (2x4 inches)(automatically coded with that color you picked, see how that's coming together?)
 * Create more boxes, create more rooms, and so on.
 * Consider adding a link to your home screen- we're mobile friendly here.
 
-TODO:
-* ~~Simple HTTP authentication~~
-* ~~Validations on the room creation~~
-* ~~Printable, color coded box labels~~
-* ~~Quick box lookup~~
-* ~~Inventory Search~~
+The Future:
+* Probably small tweaks (including making sure the labels work when I get some) until I move in October, then I'll lose interest.
+* At some point we'll move again, when I'll make whatever new tweaks I think of.
+
+License:
+* MIT, I suppose. Especially that bit about 'AS-IS.' I'm moving here, supporting this app won't be a big priority, I'm afraid.
+
+Contributing:
+* Well, sure, I'm open to reviewing a pull request here and there.
