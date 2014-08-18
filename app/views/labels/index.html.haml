@@ -1,4 +1,3 @@
-
 .page
   -@empty_boxes.times do
     .box
@@ -11,3 +10,9 @@
     -box_group.each do |box|
       =render 'box', box: box
   .page-break
+
+:css
+  body {
+    width: 8.5in;
+    margin: 0in .1875in;
+    }
